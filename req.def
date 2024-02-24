@@ -1,0 +1,33 @@
+Bootstrap: docker
+From: pytorch/pytorch:2.1.0-cuda12.1-cudnn8-devel
+
+%post
+    apt update
+    apt install -y rsync
+    apt install -y git
+    python -m pip install --upgrade pip
+    python -m pip install transformers
+    python -m pip install numpy
+    python -m pip install matplotlib
+    python -m pip install pandas
+    python -m pip install scikit-learn
+    python -m pip install seaborn
+    python -m pip install nltk
+    python -m pip install pytorch-lightning
+    python -m pip install spacy
+    python -m pip install evaluate
+    python -m pip install bert-score
+    python -m pip install pytorch-crf
+    python -m pip install sentencepiece
+    python -m pip install accelerate
+    python -m pip install fairscale
+    python -m pip install fire
+    python -m pip install trl
+    python -m pip install peft
+    python -m pip install bitsandbytes
+
+    python -m pip install torch
+    python -m pip install gc-python-utils
+    python -m pip install regex
+    
+    python -m pip install flair
